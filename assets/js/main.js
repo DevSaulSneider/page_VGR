@@ -1,4 +1,3 @@
-
 let text_typewriter = document.querySelector('#typewriter');
 
 let typewriter = new Typewriter(text_typewriter, {
@@ -10,7 +9,7 @@ typewriter
   .pauseFor(500)
   .typeString('VGR')
   .pauseFor(2500)
-  .deleteChars(10)
-  .typeString('Tu mejor opción')
+  .deleteChars(3)
+  .typeString('Tu mejor opcion')
   .pauseFor(2500)
   .start();

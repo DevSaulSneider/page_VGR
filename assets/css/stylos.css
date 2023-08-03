@@ -26,13 +26,14 @@ header{
 }
 
 .nav{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: transparent;
 }
 .nav_logo{
-  width: 8em;
+  width: 10em;
 }
 .nav_logo__img{
   width: 100%;
@@ -40,7 +41,7 @@ header{
 
 .nav_menu{
   display: flex;
-  gap: 5em;
+  gap: 3em;
   margin-left: auto;
 }
 .nav_menu__link{
@@ -67,10 +68,11 @@ header{
   align-items: center;
   gap: 2em;
   padding: 0 15%;
-  height: 90vh;
+  height: 80vh;
 }
 .hero__text{
   color: white;
+  font-size: 16px;
 }
 .hero__text__one{
   font-size: 1.2em;
@@ -91,6 +93,7 @@ header{
 }
 .hero__text__subtitle{
   margin-bottom: 40px;
+  font-size: 1em;
 }
 .hero__text > a {
   display: inline-block;
@@ -98,6 +101,7 @@ header{
   background: rgb(77, 83, 148);
   border: 1px solid transparent;
   padding: 12px 30px;
+  font-size: 1em;
   border-radius: 30px;
   line-height: 1.4;
   font-weight: 500;
@@ -110,25 +114,126 @@ header{
 .hero__text__link{
   margin-right: 2em;
 }
+
 .ico > i{
   vertical-align: middle;
   margin-right: 5px;
 }
 .hero_img{
+  margin-left:  100px; ;
   width: 500px;
   height: auto;
+  
 }
 .hero_img > img{
   width: 100%;
+  animation: dronMove 2s ease-in-out infinite;
+}
+@keyframes dronMove{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+  
+}
+
+.icons{
+  position: absolute;
+  top: 50%;
+  padding: 0 8%;
+  transform: translateY(-50%);
+}
+.icons i {
+  display: block;
+  margin: 1.5em 0;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  transition: all .5s ease;
+}
+.icons i:hover {
+  transform: translateY(-5px);
+  color: rgb(119, 150, 227);
+}
+.scroll-down{
+  position: absolute;
+  bottom: 6%;
+  right: 9%;
+}
+.scroll-down i{
+  display: block;
+  padding: 0.7em;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  background-color: rgb(119, 150, 227);
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+.scroll-down i:hover{
+  transform: translateY(-5px);
+  /* color: rgb(7, 7, 7); */
+}
+
+
+
+/* desktop XX*/
+@media (min-width: 1400px) { 
+  .container {
+    width: 100%;
+    padding: 0 1.5em ;
+  }
+  .nav_menu__link{
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: all 0.8s ease;
+  }
+  .hero__text{
+    color: white;
+    font-size: 25px;
+  }
+  .hero__text__link{
+    margin-right: 2em;
+  }
+  .hero_img{
+    margin-left:  100px; ;
+    width: 500px;
+  }
+  .icons{
+    padding: 0 5%;
+  }
+  .icons i {
+    font-size: 2em;
+  }
+  .scroll-down{
+    right: 3%;
+    transition: 2s;
+  }
+  #typewriter{
+    font-size: 1em !important;
+  }
+  .Typewriter__wrapper{
+    font-size: 1em ;
+  }
 }
 /* desktop */
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1399px){
   .hero__text__link{
     margin-right: 1em;
   }
+  .hero_img{
+    margin-left:  70px; 
+    width: 450px;
+    height: auto;
+  }
+
 }
 /* tablet */
-@media screen and (min-width: 767px) and (max-width:1023px){
+@media (min-width: 767px) and (max-width:1023px){
   *{
     font-size: 16px;
   }
@@ -150,14 +255,64 @@ header{
   }
 
   .hero_img{
+    margin-left:  10px; 
     width: 450px;
     height: auto;
   }
 }
 /* smarphone */
-@media screen and (max-width: 767px) {
-  /* .container {
+@media (max-width: 767px) {
+  html{
+    background: red;
+  }
+  .container {
     width: 100%;
-    padding: 0 0;
-  } */
+    padding: 0 1em ;
+  }
+  .hero{
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .hero__text{
+    padding-top: 8em;
+  }
+  .hero__text__title{
+    font-size: 2.5em;
+  }
+  .hero_img{
+    margin-left: 0;
+    margin-top: 5em;
+    text-align: center;
+
+  }
+  .hero_img img {
+    width: 100%;
+    height: auto;
+  }
+  .icons{
+    display: none;
+  }
+  .scroll-down{
+    display: none;
+  }
+  .nav_menu-icon>i{
+    display: block;
+  }
+  .nav_menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    height: 40vh;
+    background: #110e4b;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    transition: all .55s ease;
+  }
+  .nav_menu a{
+    
+  }
 }
