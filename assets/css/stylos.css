@@ -309,9 +309,9 @@ header{
     position: absolute;
     top: 100%;
     right: 0;
-    width: 300px;
+    width: 100%;
     height: 40vh;
-    background: #110e4b;
+    background: rgb(17, 14, 75);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -328,5 +328,6 @@ header{
   .nav_menu.open{
     z-index: 1;
     opacity: 1;
+    /* background: rgba(17, 14, 75, 0.5); */
   }
 }
