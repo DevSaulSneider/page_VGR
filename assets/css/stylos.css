@@ -236,12 +236,14 @@ header{
     width: 450px;
     height: auto;
   }
-
 }
 /* tablet */
 @media (min-width: 767px) and (max-width:1023px){
   *{
-    font-size: 16px;
+    font-size: 10px;
+  }
+  .nav_menu__link{
+    font-size: 1.5em;
   }
   .hero__text__two{
     font-size: 1.3em;
@@ -262,12 +264,12 @@ header{
 
   .hero_img{
     margin-left:  10px; 
-    width: 450px;
+    width: 325px;
     height: auto;
   }
 }
 /* smarphone */
-@media (max-width: 767px) {
+@media (max-width: 767px) { 
   html{
     background: red;
   }
@@ -281,7 +283,7 @@ header{
     grid-template-columns: 1fr;
   }
   .hero__text{
-    padding-top: 8em;
+    padding-top: 3em;
   }
   .hero__text__title{
     font-size: 2.5em;
@@ -290,7 +292,6 @@ header{
     margin-left: 0;
     margin-top: 5em;
     text-align: center;
-
   }
   .hero_img img {
     width: 100%;
@@ -308,9 +309,9 @@ header{
   .nav_menu{
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 100%;
     width: 100%;
-    height: 40vh;
+    height: auto;
     background: rgb(17, 14, 75);
     display: flex;
     align-items: center;
@@ -328,6 +329,35 @@ header{
   .nav_menu.open{
     z-index: 1;
     opacity: 1;
-    /* background: rgba(17, 14, 75, 0.5); */
+    /* background: rgba(17, 14, 75, 0.9); */
+    background: rgba(0, 0, 0, 0.9);
+    right: 0;
+  }
+}
+
+/* XS smarphone */
+@media (max-width:615px) {
+  html{
+    background-color: chartreuse;
+  }
+  .hero__text{
+    padding-top: 0.5em;
+  }
+  .hero__text__two{
+    margin: 0.5em 0;
+    line-height: 1;
+  }
+  .hero__text__title{
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  .hero_img{
+    width: 250px;
+    margin-left: 0;
+    margin-top: 5em;
+    text-align: center;
+  }
+  .hero__text__link{
+    margin-right: 0.5em;
   }
 }
