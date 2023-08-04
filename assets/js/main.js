@@ -1,3 +1,12 @@
+// Navbar
+let menu = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".nav_menu");
+
+menu.addEventListener("click", () =>{
+  navbar.classList.toggle("open");
+})
+
+// Typewriter
 let text_typewriter = document.querySelector('#typewriter');
 
 let typewriter = new Typewriter(text_typewriter, {
