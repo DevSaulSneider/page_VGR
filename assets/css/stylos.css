@@ -353,8 +353,8 @@ header{
   }
   .hero_img{
     width: 250px;
-    margin-left: 0;
-    margin-top: 5em;
+    margin: 0;
+    padding-top:2em;
     text-align: center;
   }
   .hero__text__link{
