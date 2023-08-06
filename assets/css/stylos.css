@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-size: 16px;
 }
+html{
+  background: rgb(255, 255, 255);
+}
 
 li{
   list-style: none;
@@ -187,7 +190,10 @@ header{
 
 
 /* desktop XX*/
-@media (min-width: 1400px) { 
+@media (min-width: 1400px) {
+  html{
+    background: rgb(0, 0, 0);
+  }
   .container {
     width: 100%;
     padding: 0 1.5em ;
@@ -228,6 +234,9 @@ header{
 }
 /* desktop */
 @media (min-width: 1024px) and (max-width: 1399px){
+  html{
+    background: rgb(136, 138, 152);
+  }
   .hero__text__link{
     margin-right: 1em;
   }
@@ -239,6 +248,9 @@ header{
 }
 /* tablet */
 @media (min-width: 767px) and (max-width:1023px){
+  html{
+    background: rgb(0, 255, 195);
+  }
   *{
     font-size: 10px;
   }
