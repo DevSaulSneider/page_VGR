@@ -1,63 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 16px;
 }
-html{
+
+html {
   background: rgb(255, 255, 255);
 }
 
-li{
+li {
   list-style: none;
 }
-a{
+
+a {
   text-decoration: none;
   color: white;
 }
+
 .container {
   width: 100%;
-  padding: 0 5em ;
+  padding: 0 5em;
 }
-header{
+
+header {
   height: 100%;
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(245.59deg, #2a5ddf 0%, #1f2890 28.53%, #110e4b 75.52%);
 }
 
-.nav{
+.nav {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: transparent;
 }
-.nav_logo{
+
+.nav_logo {
   width: 10em;
 }
-.nav_logo__img{
+
+.nav_logo__img {
   width: 100%;
 }
 
-.nav_menu{
+.nav_menu {
+  font-size: 16px;
   display: flex;
   gap: 3em;
   margin-left: auto;
 }
-.nav_menu__link{
+
+.nav_menu__link {
   font-size: 1em;
   font-weight: bold;
   border-bottom: 2px solid transparent;
   transition: all 0.8s ease;
 }
-.nav_menu__link:hover{
+
+.nav_menu__link:hover {
   border-bottom: 2px solid rgb(245, 245, 245);
 }
 
-.nav_menu-icon>i{
+.nav_menu-icon>i {
   color: white;
   cursor: pointer;
   font-size: 1.8em;
@@ -65,7 +73,7 @@ header{
   display: none;
 }
 
-.hero{
+.hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -73,90 +81,105 @@ header{
   padding: 0 15%;
   height: 80vh;
 }
-#typewriter{
+
+#typewriter {
   font-size: 1em !important;
 }
-.Typewriter__wrapper{
-  font-size: 1em ;
+
+.Typewriter__wrapper {
+  font-size: 1em;
 }
-.hero__text{
+
+.hero__text {
   color: white;
   font-size: 16px;
 }
-.hero__text__one{
+
+.hero__text__one {
   font-size: 1.2em;
   font-weight: bold;
   font-style: italic;
 }
-.hero__text__two{
+
+.hero__text__two {
   font-size: 1em;
   font-weight: bold;
-  margin: 0 0 40px;
   line-height: 3;
 }
-.hero__text__title{
+
+.hero__text__title {
   font-size: 2.5em;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 1em;
 }
-.hero__text__subtitle{
-  margin-bottom: 40px;
+
+.hero__text__subtitle {
+  margin-bottom: 2em;
   font-size: 1em;
 }
-.hero__text > a {
+
+.hero__text>a {
   display: inline-block;
   color: white;
   background: rgb(77, 83, 148);
   border: 1px solid transparent;
-  padding: 12px 30px;
+  padding: 0.8em 2em;
   font-size: 1em;
   border-radius: 30px;
-  line-height: 1.4;
+  line-height: 1;
   font-weight: 500;
   transition: all .55s ease;
 }
-.hero__text > a:hover{
+
+.hero__text>a:hover {
   background: transparent;
   border: 1px solid white;
 }
-.hero__text__link{
+
+.hero__text__link {
   margin-right: 2em;
 }
 
-.ico > i{
+.ico>i {
   vertical-align: middle;
   margin-right: 5px;
 }
-.hero_img{
-  margin-left:  100px; ;
-  width: 500px;
+
+.hero_img {
+  /* margin-left:  100px; ; */
+  width: 100%;
   height: auto;
-  
+
 }
-.hero_img > img{
+
+.hero_img>img {
   width: 100%;
   animation: dronMove 2s ease-in-out infinite;
 }
-@keyframes dronMove{
-  0%{
+
+@keyframes dronMove {
+  0% {
     transform: translateY(0);
   }
-  50%{
+
+  50% {
     transform: translateY(-20px);
   }
-  100%{
+
+  100% {
     transform: translateY(0);
   }
-  
+
 }
 
-.icons{
+.icons {
   position: absolute;
   top: 50%;
   padding: 0 8%;
   transform: translateY(-50%);
 }
+
 .icons i {
   display: block;
   margin: 1.5em 0;
@@ -164,16 +187,19 @@ header{
   color: rgb(255, 255, 255);
   transition: all .5s ease;
 }
+
 .icons i:hover {
   transform: translateY(-5px);
   color: rgb(119, 150, 227);
 }
-.scroll-down{
+
+.scroll-down {
   position: absolute;
   bottom: 6%;
   right: 9%;
 }
-.scroll-down i{
+
+.scroll-down i {
   display: block;
   padding: 0.7em;
   font-size: 1.5em;
@@ -182,210 +208,55 @@ header{
   border-radius: 50%;
   transition: all .5s ease;
 }
-.scroll-down i:hover{
+
+.scroll-down i:hover {
   transform: translateY(-5px);
   /* color: rgb(7, 7, 7); */
 }
 
 
+/* =================================================================== */
+/*                        RESPONSIVE DESING                            */
+/* =================================================================== */
 
-/* desktop XX*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) {
+  html{
+    background-color: rgb(212, 150, 150);
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  html{
+    background-color: red;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  html{
+    background-color: green;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  html{
+    background-color: yellow;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  html{
+    background-color: purple;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
   html{
-    background: rgb(0, 0, 0);
-  }
-  .container {
-    width: 100%;
-    padding: 0 1.5em ;
-  }
-  .nav_menu__link{
-    font-size: 2em;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: all 0.8s ease;
-  }
-  .hero__text{
-    color: white;
-    font-size: 25px;
-  }
-  .hero__text__link{
-    margin-right: 2em;
-  }
-  .hero_img{
-    margin-left:  100px; ;
-    width: 500px;
-  }
-  .icons{
-    padding: 0 5%;
-  }
-  .icons i {
-    font-size: 2em;
-  }
-  .scroll-down{
-    right: 3%;
-    transition: 2s;
-  }
-  #typewriter{
-    font-size: 1em !important;
-  }
-  .Typewriter__wrapper{
-    font-size: 1em ;
-  }
-}
-/* desktop */
-@media (min-width: 1024px) and (max-width: 1399px){
-  html{
-    background: rgb(136, 138, 152);
-  }
-  .hero__text__link{
-    margin-right: 1em;
-  }
-  .hero_img{
-    margin-left:  70px; 
-    width: 450px;
-    height: auto;
-  }
-}
-/* tablet */
-@media (min-width: 767px) and (max-width:1023px){
-  html{
-    background: rgb(0, 255, 195);
-  }
-  *{
-    font-size: 10px;
-  }
-  .nav_menu__link{
-    font-size: 1.5em;
-  }
-  .hero__text__two{
-    font-size: 1.3em;
-    font-weight: bold;
-    margin: 0 0 30px;
-    line-height: 3;
-  }
-
-  .hero__text__title{
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-
-  .hero__text__link{
-    margin-right: 1em;
-  }
-
-  .hero_img{
-    margin-left:  10px; 
-    width: 325px;
-    height: auto;
-  }
-}
-/* smarphone */
-@media (max-width: 767px) { 
-  html{
-    background: red;
-  }
-  .container {
-    width: 100%;
-    padding: 0 1em ;
-  }
-  .hero{
-    /* height: 100%; */
-    gap: 1rem;
-    grid-template-columns: 1fr;
-  }
-  .hero__text{
-    padding-top: 3em;
-  }
-  .hero__text__title{
-    font-size: 2.5em;
-  }
-  .hero_img{
-    margin:auto;
-    padding-top: 5em;
-    text-align: center;
-  }
-  .hero_img img {
-    width: 100%;
-    height: auto;
-  }
-  .icons{
-    display: none;
-  }
-  .scroll-down{
-    display: none;
-  }
-  .nav_menu-icon>i{
-    display: block;
-  }
-  .nav_menu{
-    position: absolute;
-    top: 100%;
-    right: 100%;
-    width: 100%;
-    height: auto;
-    background: rgb(17, 14, 75);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 20px;
-    transition: all .55s ease;
-    z-index: -1;
-    opacity: 0;
-  }
-  .nav_menu a{
-    display: block;
-    margin: 0;
-    margin-left: 0;
-  }
-  .nav_menu.open{
-    z-index: 1;
-    opacity: 1;
-    /* background: rgba(17, 14, 75, 0.9); */
-    background: rgba(0, 0, 0, 0.9);
-    right: 0;
-  }
-}
-
-/* XS smarphone */
-@media (max-width:615px) {
-  html{
-    background-color: chartreuse;
-  }
-  .hero__text{
-    padding-top: 0.5em;
-  }
-  .hero__text__two{
-    margin: 0.5em 0;
-    line-height: 1;
-  }
-  .hero__text__title{
-    font-size: 2em;
-    margin-bottom: 1em;
-  }
-  .hero_img{
-    width: 200px;
-    margin: auto;
-    padding-top:2em;
-    text-align: center;
-  }
-  .hero__text__link{
-    margin-right: 0.5em;
-  }
-}
-/* XXS smarphone */
-@media (max-width:320px) {
-  html{
-    background-color: rgb(29, 47, 10);
-  }
-  .hero__text__subtitle{
-    margin-bottom: 1em;
-  }
-  .hero__text>a{
-    padding: 0.5em 1.5em;
-  }
-  
-  .hero_img{
-    width: 60%;
+    background-color: rgb(39, 217, 226);
   }
 }
