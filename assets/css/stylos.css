@@ -290,7 +290,7 @@ header{
     padding: 0 1em ;
   }
   .hero{
-    height: 100%;
+    /* height: 100%; */
     gap: 1rem;
     grid-template-columns: 1fr;
   }
@@ -364,12 +364,28 @@ header{
     margin-bottom: 1em;
   }
   .hero_img{
-    width: 250px;
-    margin: 0;
+    width: 200px;
+    margin: auto;
     padding-top:2em;
     text-align: center;
   }
   .hero__text__link{
     margin-right: 0.5em;
+  }
+}
+/* XXS smarphone */
+@media (max-width:320px) {
+  html{
+    background-color: rgb(29, 47, 10);
+  }
+  .hero__text__subtitle{
+    margin-bottom: 1em;
+  }
+  .hero__text>a{
+    padding: 0.5em 1.5em;
+  }
+  
+  .hero_img{
+    width: 60%;
   }
 }
