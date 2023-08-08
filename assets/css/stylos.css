@@ -21,7 +21,7 @@ a {
 
 .container {
   width: 100%;
-  padding: 0 1em;
+  padding: 1em 1em;
 }
 
 header {
@@ -214,6 +214,36 @@ header {
 }
 
 
+
+
+/* Section advantages */
+.advantages{
+  text-align: center;
+}
+.advantages-container{
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
+.advantages-container__card{
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  border: 2px solid ;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.advantages-container__card__ico > i{
+  font-size: 3em;
+  color: white;
+}
+.advantages-container__card__text{
+  text-align: justify;
+}
 /* =================================================================== */
 /*                        RESPONSIVE DESING                            */
 /* =================================================================== */
@@ -280,6 +310,20 @@ header {
   }
   .hero__text {
     font-size: 10px;
+  }
+  .advantages{
+    text-align: center;
+  }
+  .advantages-container{
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+  }
+  .advantages-container__card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
