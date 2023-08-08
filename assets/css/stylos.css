@@ -174,8 +174,8 @@ header {
 
 .icons {
   position: absolute;
-  top: 50%;
-  padding: 0 8%;
+  top: 60%;
+  padding: 0 5%;
   transform: translateY(-50%);
 }
 
@@ -289,11 +289,8 @@ header {
     background-color: green;
   }
   
-  .hero__text {
-    font-size: 16px;
-  }
   .nav_menu{
-    font-size: 18px;
+    font-size: 1em;
     justify-content: end;
     position: relative;
     right: 0;
@@ -301,13 +298,18 @@ header {
     display: flex;
     align-items: center;
     flex-direction: row;
-    padding: 50px 20px;
     transition: all .55s ease;
     z-index: 1;
     opacity: 1;
   }
   .nav_menu-icon>i{
     display: none;
+  }
+  .hero {
+    padding: 0 15%;
+  }
+  .icons{
+    display: block;
   }
 }
 
@@ -316,11 +318,13 @@ header {
   html{
     background-color: yellow;
   }
-  .nav_menu{
-    font-size: 20px;
-  }
   .hero__text {
     font-size: 20px;
+  }
+  .icons{
+    top: 50%;
+    padding: 0 5%;
+    display: block;
   }
 }
 
@@ -328,6 +332,9 @@ header {
 @media (min-width: 1200px) {
   html{
     background-color: purple;
+  }
+  .icons i {
+    font-size: 2em;
   }
 }
 
@@ -341,5 +348,8 @@ header {
   }
   .hero__text {
     font-size: 23px;
+  }
+  .icons i {
+    font-size: 2.5em;
   }
 }
