@@ -21,7 +21,7 @@ a {
 
 .container {
   width: 100%;
-  padding: 0 5em;
+  padding: 0 1em;
 }
 
 header {
@@ -124,7 +124,6 @@ header {
   color: white;
   background: rgb(77, 83, 148);
   border: 1px solid transparent;
-  padding: 0.8em 2em;
   font-size: 1em;
   border-radius: 30px;
   line-height: 1;
@@ -219,10 +218,52 @@ header {
 /*                        RESPONSIVE DESING                            */
 /* =================================================================== */
 
-/* Small devices (landscape phones, 576px and up) */
+/* X-Small devices (landscape phones, 320px and up) */
 @media (min-width: 320px) {
   html{
     background-color: rgb(212, 150, 150);
+  }
+  .icons{
+    display: none;
+  }
+  .scroll-down{
+    display: none;
+  }
+  .nav_menu-icon>i{
+    display: block;
+  }
+  .nav_menu{
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    width: 100%;
+    height: auto;
+    background: rgb(17, 14, 75);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    transition: all .55s ease;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .nav_menu.open{
+    z-index: 1;
+    opacity: 1;
+    /* background: rgba(17, 14, 75, 0.9); */
+    background: rgba(0, 0, 0, 0.9);
+    right: 0;
+  }
+
+  .hero{
+    /* height: 100%; */
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .hero__text__link{
+    margin: 0.5em;
+    padding: 0.8em 2em;
   }
 }
 
@@ -238,12 +279,40 @@ header {
   html{
     background-color: green;
   }
+  .hero {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2em;
+    padding: 0 15%;
+  }
+  .hero__text {
+    font-size: 14px;
+  }
+  .nav_menu{
+    justify-content: end;
+    position: relative;
+    right: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 50px 20px;
+    transition: all .55s ease;
+    z-index: 1;
+    opacity: 1;
+  }
+  .nav_menu-icon>i{
+    display: none;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   html{
     background-color: yellow;
+  }
+  .hero__text {
+    font-size: 16px;
   }
 }
 
