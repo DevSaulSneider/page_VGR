@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Montserrat:wght@900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +7,7 @@
 
 html {
   background: rgb(255, 255, 255);
+  scroll-behavior: smooth;
 }
 
 li {
@@ -19,9 +19,9 @@ a {
   color: white;
 }
 
-.container {
+.nav_container {
   width: 100%;
-  padding: 1em 1em;
+  padding: 0em 1em;
 }
 
 header {
@@ -213,9 +213,16 @@ header {
   /* color: rgb(7, 7, 7); */
 }
 
+/* Main */
 
+section{
+  margin-top: 3em;
+}
 
-
+.container{
+  width: 100%;
+  padding: 0 1em;
+}
 /* Section advantages */
 .advantages{
   text-align: center;
@@ -231,10 +238,16 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2em;
-  border: 2px solid ;
+  border: 2px solid transparent;
   padding: 1em;
   border-radius: 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.advantages-container__card:hover{
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 251, 251, 0.582);
+  transition: all .5s ease-in-out;
+  cursor: pointer;
 }
 
 .advantages-container__card__ico > i{
@@ -242,8 +255,104 @@ header {
   color: white;
 }
 .advantages-container__card__text{
+  text-align: start;
+}
+.card__text__title{
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+.nosotros__empresa{
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+.nosotros__text__title{
+  font-family: 'Hind', sans-serif;
+}
+
+.nosotros_img{
+  width: 100%;
+}
+
+.nosotros_img > img {
+  width: 100%;
+  /* border-radius: 1em; */
+}
+
+.nosotros__text__subtitle{
+  font-family: 'Hind', sans-serif;
+  font-size: 2em;
+  padding: 1em 0;
+}
+.nosotros__text__body{
+  font-size: 1em;
   text-align: justify;
 }
+.nosotros__text__body span{
+  font-size: 1.5em;
+}
+.nosotros__skill{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nosotros__skill__icon{
+  margin: 1em;
+  font-size: 2em;
+  padding: 1em;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.nosotros__skill__text__title{
+  font-family: 'Hind', sans-serif;
+  text-align: start;
+  font-size: 1.2em;
+  padding: 1em 0;
+}
+.nosotros__skill__text__body{
+  font-size: 1em;
+  text-align: justify;
+}
+
+.proyect{
+  background-color: rgb(17, 14, 75);
+  color: rgb(163, 182, 231);
+  display: flex;
+  gap: 3em;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 2em 0;
+}
+.proyect__card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 80%;
+}
+.proyect__card__ico > i{
+  font-size: 4em;
+}
+.proyect__card__body{
+  font-size: 16px;
+}
+.proyect__card__body__number{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.proyect__card__body__text{
+  font-size: 1.5em;
+}
+
+
 /* =================================================================== */
 /*                        RESPONSIVE DESING                            */
 /* =================================================================== */
@@ -292,7 +401,7 @@ header {
     grid-template-columns: 1fr;
   }
   .hero__text__link{
-    margin: 0.5em;
+    margin: 0.2em;
     padding: 0.8em 2em;
   }
 }
@@ -332,9 +441,14 @@ header {
   html{
     background-color: green;
   }
-  
+  section{
+    margin: 0;
+  }
+  .nav_logo {
+    width: 18em;
+  }
   .nav_menu{
-    font-size: 1em;
+    font-size: 1.2em;
     justify-content: end;
     position: relative;
     right: 0;
@@ -350,10 +464,26 @@ header {
     display: none;
   }
   .hero {
-    padding: 0 15%;
+    padding: 0 8%;
   }
   .icons{
     display: block;
+    right: 0;
+  }
+
+  .container{
+    padding: 2em 5em;
+  }
+  .nosotros__empresa{
+    flex-direction: row;
+  }
+  .nosotros__skill{
+    flex-direction: row;
+    border: 1px solid;
+  }
+  .proyect{
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -370,6 +500,9 @@ header {
     padding: 0 5%;
     display: block;
   }
+  .advantages-container__card{
+    font-size: 20px;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -379,6 +512,9 @@ header {
   }
   .icons i {
     font-size: 2em;
+  }
+  .container{
+    padding: 2em 10em;
   }
 }
 
@@ -395,5 +531,14 @@ header {
   }
   .icons i {
     font-size: 2.5em;
+  }
+  .container{
+    padding: 2em 10em;
+  }
+  .advantages-container__card{
+    font-size: 23px;
+  }
+  .advantages-container{
+    gap: 2em;
   }
 }
