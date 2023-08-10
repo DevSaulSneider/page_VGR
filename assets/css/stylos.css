@@ -4,12 +4,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   background: rgb(255, 255, 255);
   scroll-behavior: smooth;
 }
-
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
 li {
   list-style: none;
 }
@@ -161,11 +164,9 @@ header {
   0% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-20px);
   }
-
   100% {
     transform: translateY(0);
   }
@@ -238,24 +239,23 @@ section{
   justify-content: center;
   align-items: center;
   gap: 2em;
-  border: 2px solid transparent;
   padding: 1em;
   border-radius: 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.advantages-container__card:hover{
+/* .advantages-container__card:hover{
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 251, 251, 0.582);
   transition: all .5s ease-in-out;
   cursor: pointer;
-}
+} */
 
 .advantages-container__card__ico > i{
   font-size: 3em;
   color: white;
 }
 .advantages-container__card__text{
-  text-align: start;
+  text-align: center;
 }
 .card__text__title{
   text-align: center;
@@ -271,7 +271,8 @@ section{
   margin-bottom: 2em;
 }
 .nosotros__text__title{
-  font-family: 'Hind', sans-serif;
+  font-size: 2.5em;
+  border-bottom: 2px solid #110e4b;
 }
 
 .nosotros_img{
@@ -280,7 +281,7 @@ section{
 
 .nosotros_img > img {
   width: 100%;
-  /* border-radius: 1em; */
+  border-radius: 1em;
 }
 
 .nosotros__text__subtitle{
@@ -289,7 +290,7 @@ section{
   padding: 1em 0;
 }
 .nosotros__text__body{
-  font-size: 1em;
+  font-size: 1.3em;
   text-align: justify;
 }
 .nosotros__text__body span{
@@ -307,16 +308,17 @@ section{
   padding: 1em;
   border: 1px solid;
   border-radius: 50%;
+  animation: dronMove 2s ease-in-out infinite;
 }
 
 .nosotros__skill__text__title{
   font-family: 'Hind', sans-serif;
   text-align: start;
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding: 1em 0;
 }
 .nosotros__skill__text__body{
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: justify;
 }
 
@@ -328,8 +330,7 @@ section{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  padding: 2em 0;
+  padding: 2em 5em;
 }
 .proyect__card{
   display: flex;
@@ -474,17 +475,25 @@ section{
   .container{
     padding: 2em 5em;
   }
+  
+  .advantages-container__card{
+    font-size: 20px;
+  }
   .nosotros__empresa{
     flex-direction: row;
   }
   .nosotros__skill{
     flex-direction: row;
-    border: 1px solid;
+    padding: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .proyect{
     display: flex;
     flex-direction: row;
+    gap: 1em;
+    padding: 2em 5em;
   }
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -500,8 +509,12 @@ section{
     padding: 0 5%;
     display: block;
   }
+  
   .advantages-container__card{
     font-size: 20px;
+  }
+  .proyect{
+    gap: 2em;
   }
 }
 
@@ -515,6 +528,12 @@ section{
   }
   .container{
     padding: 2em 10em;
+  }
+  .advantages-container__card{
+    font-size: 23px;
+  }
+  .proyect{
+    gap: 4em;
   }
 }
 
