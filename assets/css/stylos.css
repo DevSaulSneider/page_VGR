@@ -216,13 +216,9 @@ header {
 
 /* Main */
 
-section{
-  margin-top: 3em;
-}
-
 .container{
   width: 100%;
-  padding: 0 1em;
+  padding: 3em 1em;
 }
 /* Section advantages */
 .advantages{
@@ -234,6 +230,7 @@ section{
   flex-direction: column;
 }
 .advantages-container__card{
+  flex: 1;
   font-size: 16px;
   display: flex;
   justify-content: center;
@@ -290,11 +287,10 @@ section{
   padding: 1em 0;
 }
 .nosotros__text__body{
-  font-size: 1.3em;
-  text-align: justify;
+  font-size: 1.1em;
 }
 .nosotros__text__body span{
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .nosotros__skill{
   display: flex;
@@ -318,11 +314,11 @@ section{
   padding: 1em 0;
 }
 .nosotros__skill__text__body{
-  font-size: 1.5em;
-  text-align: justify;
+  font-size: 1.2em;
 }
 
 .proyect{
+  margin: 2em 0;
   background-color: rgb(17, 14, 75);
   color: rgb(163, 182, 231);
   display: flex;
@@ -352,8 +348,97 @@ section{
 .proyect__card__body__text{
   font-size: 1.5em;
 }
+.servicios{
+  text-align: center;
+  
+}
+.servicios__title{
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+.servicios__text{
+  font-size: 1.2em;
+}
 
-
+.servicios__card-container{
+  padding: 2em 2em;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #2bfc10; */
+  flex-direction: column;
+}
+.servicios__card{
+  position: relative;
+  width: 300px;
+  height: 350px;
+}
+.servicios__card .servicios__card_face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
+}
+.servicios__card .front{
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+.servicios__card .front img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.servicios__card .front h3{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+.servicios__card .back{
+  transform: perspective(600px) rotateY(180deg);
+  /* background: rgb(3, 35, 54); */
+  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../img/servicios/servicios3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px red;
+}
+.servicios__card .back .servicios__card_face__link{
+  border-top: 1px solid red;
+  height: 50px;
+  line-height: 50px;
+}
+.servicios__card .back .servicios__card_face__link a{
+  color: red;
+}
+.servicios__card .back h3{
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 5px;
+}
+.servicios__card .back p{
+  letter-spacing: 1px;
+}
+.servicios__card:hover .front{
+  transform: perspective(600px) rotateY(180deg) ;
+}
+.servicios__card:hover .back{
+  transform: perspective(600px) rotateY(360deg);
+}
 /* =================================================================== */
 /*                        RESPONSIVE DESING                            */
 /* =================================================================== */
@@ -435,6 +520,10 @@ section{
     align-items: center;
     flex-direction: column;
   }
+  .servicios__card-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -442,9 +531,9 @@ section{
   html{
     background-color: green;
   }
-  section{
+  /* section{
     margin: 0;
-  }
+  } */
   .nav_logo {
     width: 18em;
   }
@@ -482,6 +571,16 @@ section{
   .nosotros__empresa{
     flex-direction: row;
   }
+  .nosotros__text{
+    flex: 2;
+  }
+  .nosotros__text__subtitle{
+    padding: 0.5em 0;
+  }
+  .nosotros_img{
+    flex: 1.5;
+    width: 100%;
+  }
   .nosotros__skill{
     flex-direction: row;
     padding: 2em;
@@ -509,7 +608,13 @@ section{
     padding: 0 5%;
     display: block;
   }
-  
+  .nosotros__text{
+    flex: 2;
+  }
+  .nosotros_img{
+    flex: 1;
+    width: 100%;
+  }
   .advantages-container__card{
     font-size: 20px;
   }
