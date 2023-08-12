@@ -371,7 +371,7 @@ header {
 }
 .servicios__card{
   position: relative;
-  width: 300px;
+  width: 250px;
   height: 350px;
 }
 .servicios__card .servicios__card_face{
@@ -438,6 +438,25 @@ header {
 }
 .servicios__card:hover .back{
   transform: perspective(600px) rotateY(360deg);
+}
+
+
+.galeria__fotografia__container{
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+.galeria__fotografia__container img{
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  filter: brightness(80%);
+  transition: .7s ease;
+}
+.galeria__fotografia__container img:hover{
+  width: 100%;
+  opacity: 1;
+  filter: brightness(130%);
 }
 /* =================================================================== */
 /*                        RESPONSIVE DESING                            */
