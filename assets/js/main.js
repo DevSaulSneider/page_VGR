@@ -22,3 +22,16 @@ typewriter
   .typeString('Tu mejor opcion')
   .pauseFor(2500)
   .start();
+
+// Video
+let video = document.querySelectorAll("video");
+video.forEach(e => e.addEventListener("click", () => {
+  e.classList.toggle("video-active");
+
+  if(e.paused){
+    e.play();
+  }else{
+    e.pause();
+    e.currentTime = 0;
+  }
+}));

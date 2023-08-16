@@ -21,7 +21,9 @@ a {
   text-decoration: none;
   color: white;
 }
-
+abbr[title] {
+  text-decoration: none;
+}
 .nav_container {
   width: 100%;
   padding: 0em 1em;
@@ -43,7 +45,7 @@ header {
 }
 
 .nav_logo {
-  width: 8em;
+  width: 12em;
 }
 
 .nav_logo__img {
@@ -439,24 +441,88 @@ header {
 .servicios__card:hover .back{
   transform: perspective(600px) rotateY(360deg);
 }
-
-
+.galeria{
+  margin-top: 2em;
+}
+.galeria__title{
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.galeria__subtitle{
+  text-align: center;
+  font-size: 1.5em;
+  font-style: italic;
+}
 .galeria__fotografia__container{
+  width: 100%;
+  min-height: 50vh;
   display: flex;
-  width: 100%;
-  height: 500px;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10%;
 }
-.galeria__fotografia__container img{
-  width: 0;
-  flex-grow: 1;
+.galeria__fotografia{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+.galeria__fotografia a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.galeria__fotografia img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  filter: brightness(80%);
-  transition: .7s ease;
 }
-.galeria__fotografia__container img:hover{
+
+.galeria__videos__container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.galeria__videos__container .galeria__videos__container__video{
+  height: 15rem;
+  width: 25rem;
+  margin: 2rem;
+  box-shadow: 0 .5rem 1 rem rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.galeria__videos__container .galeria__videos__container__video video{
+  height: 100%;
   width: 100%;
-  opacity: 1;
-  filter: brightness(130%);
+  object-fit: cover;
+  outline: none;
+  border: none;
+}
+
+.galeria__videos__container .galeria__videos__container__video video:hover{
+  transition: .2s linear;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+.galeria__videos__container .galeria__videos__container__video .video-active{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+}
+.galeria__videos__container .galeria__videos__container__video .video-active:hover{
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
+  
 }
 /* =================================================================== */
 /*                        RESPONSIVE DESING                            */
@@ -557,7 +623,7 @@ header {
     width: 18em;
   }
   .nav_menu{
-    font-size: 1.2em;
+    font-size: 1.1em;
     justify-content: end;
     position: relative;
     right: 0;
@@ -619,6 +685,9 @@ header {
   html{
     background-color: yellow;
   }
+  .nav_logo {
+    width: 28em;
+  }
   .hero__text {
     font-size: 20px;
   }
@@ -647,6 +716,7 @@ header {
   html{
     background-color: purple;
   }
+  
   .icons i {
     font-size: 2em;
   }
