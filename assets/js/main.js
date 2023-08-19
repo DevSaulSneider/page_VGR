@@ -1,4 +1,4 @@
-import { formulario_exitoso, formulario_error, formulario_errorEmailJS } from "./funciones.js";
+import { formulario_error,  sendEmail } from "./funciones.js";
 
 // Navbar
 let menu = document.querySelector("#menu-icon");
@@ -7,27 +7,7 @@ let navbar = document.querySelector(".nav_menu");
 let video = document.querySelectorAll("video");
 //Form
 const fomulario = document.querySelector("#formulario");
-const btn_enviar = document.querySelector("#enviar");
-const sendEmail = (e) => {
-  e.preventDefault();
-  let nombre = document.querySelector("#nombre").value;
-  btn_enviar.disabled = true;
 
-  //Service ID - Template ID - Form ID - Public Key
-  emailjs.sendForm('service_6tsvolc', 'template_stpr4ky', '#formulario', 'U4THGMO-OMu7Ju43i')
-  .then((response) => {
-    formulario_exitoso(nombre);
-    formulario.reset();
-  })
-  .catch((error) => {
-    formulario_errorEmailJS(nombre);
-    console.log("Error al enviar mensaje de emailjs");
-    console.log(error);
-  })
-  .finally(() => {
-    btn_enviar.disabled = false;
-  })
-}
 
 menu.addEventListener("click", () => {
   navbar.classList.toggle("open");
