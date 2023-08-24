@@ -1,0 +1,11 @@
+console.log("RESTAURANTE SAC");
+let cliente = prompt("Ingrese su nombre");
+const saludo = `Bienvenido ${cliente}`;
+console.log(saludo);
+const mensaje = `${cliente} seleccione una opcion`;
+console.log(mensaje);
+let opcion1 = "Desayuno";
+let opcion2 = "Almuerzo";
+let opcion3 = "Cena";
+let opcion4 = "Salir";
+console.log(opcion1, opcion2, opcion3, opcion4);

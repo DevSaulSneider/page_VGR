@@ -17,12 +17,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   <!-- my css -->
-  <link rel="stylesheet" href="assets/css/stylos.css?=16082023">
+  <link rel="stylesheet" href="assets/css/stylos.css?=24082023">
   <title>VGR - Servicios Audiovisuales</title>
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <nav class="nav nav_container">
       <div class="nav_logo">
         <img class="nav_logo__img" src="assets/media/logo/logo-blanco.png" alt="logo VGR">
@@ -71,7 +71,12 @@
     </div>
 
     <div class="scroll-down">
-      <a href="index.html"><i class="fa-solid fa-arrow-up"></i></a>
+      <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+    <div class="btn_whatsapp">
+      <a class="btn_whatsapp__link"
+        href="https://api.whatsapp.com/send?phone=51923005130&text=Hola,%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios"
+        target="_blank"><i class="fa-brands fa-whatsapp fa-beat"></i></a>
     </div>
   </header>
 
@@ -296,39 +301,58 @@
       <h3 class="galeria__subtitle">Fotografias</h3>
       <div class="galeria__fotografia__container">
         <div class="galeria__fotografia">
-          <a href="assets/media/galeria/img/foto1.jpeg" data-lightbox="models" data-title="Imagen1">
-            <img src="assets/media/galeria/img/foto1.jpeg" alt="abc">
-          </a>
-          <a href="assets/media/galeria/img/foto2.jpg" data-lightbox="models" data-title="Imagen2">
-            <img src="assets/media/galeria/img/foto2.jpg" alt="">
-          </a>
-          <a href="assets/media/galeria/img/foto3.jpeg" data-lightbox="models" data-title="Imagen3">
-            <img src="assets/media/galeria/img/foto3.jpeg" alt="">
-          </a>
-          <a href="assets/media/galeria/img/foto4.jpeg" data-lightbox="models" data-title="Imagen4">
-            <img src="assets/media/galeria/img/foto4.jpeg" alt="">
-          </a>
-          <a href="assets/media/galeria/img/foto5.jpeg" data-lightbox="models" data-title="Imagen5">
-            <img src="assets/media/galeria/img/foto5.jpeg" alt="">
-          </a>
-          <a href="assets/media/galeria/img/foto6.jpg" data-lightbox="models" data-title="Imagen6">
-            <img src="assets/media/galeria/img/foto6.jpg" alt="">
-          </a>
+          <div class="galeria__fotografia__a-container">
+            <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto1.jpeg"
+              data-lightbox="models" data-title="Imagen1">
+              <img class="galeria__fotografia__a-container__img" src="assets/media/galeria/img/foto1.jpeg" alt="abc">
+            </a>
+          </div>
+          <div class="galeria__fotografia__a-container">
+            <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto2.jpg"
+              data-lightbox="models" data-title="Imagen2">
+              <img class="galeria__fotografia__a-container__link__img" src="assets/media/galeria/img/foto2.jpg" alt="">
+            </a>
+          </div>
+          <div class="galeria__fotografia__a-container">
+            <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto3.jpeg"
+              data-lightbox="models" data-title="Imagen3">
+              <img class="galeria__fotografia__a-container__link__img" src="assets/media/galeria/img/foto3.jpeg" alt="">
+            </a>
+          </div>
+          <div class="galeria__fotografia__a-container">
+            <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto4.jpeg"
+              data-lightbox="models" data-title="Imagen4">
+              <img class="galeria__fotografia__a-container__link__img" src="assets/media/galeria/img/foto4.jpeg" alt="">
+            </a>
+          </div>
+          <div class="galeria__fotografia__a-container">
+            <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto5.jpeg"
+              data-lightbox="models" data-title="Imagen5">
+              <img class="galeria__fotografia__a-container__link__img" src="assets/media/galeria/img/foto5.jpeg" alt="">
+            </a>
+          </div>
+          <div class="galeria__fotografia__a-container">
+            <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto6.jpg"
+              data-lightbox="models" data-title="Imagen6">
+              <img class="galeria__fotografia__a-container__link__img" src="assets/media/galeria/img/foto6.jpg" alt="">
+            </a>
+          </div>
+
         </div>
       </div>
       <h3 class="galeria__subtitle">Videos</h3>
       <div class="galeria__videos__container">
         <div class="galeria__videos__container__video">
-          <video src="assets/media/galeria/video/video1.mp4" muted loop></video>
+          <!-- <video src="assets/media/galeria/video/video1.mp4" muted loop></video> -->
         </div>
         <div class="galeria__videos__container__video">
-          <video src="assets/media/galeria/video/video2.mp4" muted loop></video>
+          <!-- <video src="assets/media/galeria/video/video2.mp4" muted loop></video> -->
         </div>
         <div class="galeria__videos__container__video">
-          <video src="assets/media/galeria/video/video3.mp4" muted loop></video>
+          <!-- <video src="assets/media/galeria/video/video3.mp4" muted loop></video> -->
         </div>
         <div class="galeria__videos__container__video">
-          <video src="assets/media/galeria/video/video4.mp4" muted loop></video>
+          <!-- <video src="assets/media/galeria/video/video4.mp4" muted loop></video> -->
         </div>
       </div>
     </section>
@@ -374,24 +398,64 @@
 
         <div class="contactanos__contact__box2">
           <form id="formulario" class="formulario">
-            <p class="formulario__title">Cont&aacute;ctanos</p>
+            <p class="formulario__title">Comentanos que estas buscando</p>
+            <p class="formulario__text">Te cotizaremos de forma inmediata</p>
             <label for="nombre" class="formulario__label">Nombre:</label>
-            <input type="text" id="nombre" name="user_nombre" class="formulario__input" placeholder="Escriba su nombre" >
+            <input type="text" id="nombre" name="user_nombre" class="formulario__input" placeholder="Escriba su nombre">
             <label for="email" class="formulario__label">Email:</label>
-            <input type="email" name="user_correo" id="email" class="formulario__input" placeholder="Escriba su email" >
+            <input type="email" name="user_correo" id="email" class="formulario__input" placeholder="Escriba su email">
             <label for="telefono" class="formulario__label">Telefono:</label>
             <input type="text" name="user_telefono" id="telefono" class="formulario__input">
             <label for="mensaje" class="formulario__label">Mensaje:</label>
-            <textarea name="user_mensaje" id="mensaje" cols="30" rows="5" class="formulario__textarea" placeholder="Escriba su mensaje" ></textarea>
-            <button type="submit" id="enviar" class="formulario__submit"><i class="fa-solid fa-paper-plane fa-beat"></i>&nbsp; &nbsp; Enviar</button>
+            <textarea name="user_mensaje" id="mensaje" cols="30" rows="5" class="formulario__textarea"
+              placeholder="Escriba su mensaje"></textarea>
+            <button type="submit" id="enviar" class="formulario__submit"><i
+                class="fa-solid fa-paper-plane fa-beat"></i>&nbsp; &nbsp; Enviar</button>
           </form>
         </div>
+      </div>
+
+      <div class="contactanos__map">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15599.379808859077!2d-77.032259334562!3d-12.190951213653952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b763d7b3a021%3A0x2aa2b834ea824a38!2sSanto%20Tomas%20151%2C%20Lima%2015066!5e0!3m2!1ses!2spe!4v1692851803187!5m2!1ses!2spe"
+          width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="pie-pagina">
+    <div class="pie-pagina__grupo1">
+      <div class="pie-pagina__grupo1__box">
+        <figure>
+          <a href="#">
+            <img src="assets/media/logo/logo-blanco.png" alt="logo de VGR">
+          </a>
+        </figure>
+      </div>
 
+      <div class="pie-pagina__grupo1__box">
+        <h2>Sobre Nosotros</h2>
+        <p>En VGR, la pasión por capturar momentos cobra vida. Expertos visuales comprometidos.</p>
+        <p>Transformamos lo cotidiano en eternos recuerdos visuales. Tu historia, nuestra misión.</p>
+      </div>
+
+      <div class="pie-pagina__grupo1__box">
+        <h2>Siguenos</h2>
+        <div class="red-social">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pie-pagina__grupo2">
+      <small>&copy; 2023 <b>Corporacion VGR</b> - Todos los derechos reservados</small> |
+      <small>Designed by <a href="#">DevSND</a></small>
+    </div>
   </footer>
   <!-- lightbox -->
   <script src="assets/js/lightbox-plus-jquery.js"></script>
