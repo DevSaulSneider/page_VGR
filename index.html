@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   <!-- my css -->
-  <link rel="stylesheet" href="assets/css/stylos.css?=24082023">
+  <link rel="stylesheet" href="assets/css/stylos.css?=27082023">
   <title>VGR - Servicios Audiovisuales</title>
 </head>
 
@@ -25,7 +25,7 @@
   <header id="header">
     <nav class="nav nav_container">
       <div class="nav_logo">
-        <img class="nav_logo__img" src="assets/media/logo/logo-blanco.png" alt="logo VGR">
+        <img loading="eager" class="nav_logo__img" src="assets/media/logo/logo-blanco.png" alt="logo VGR">
       </div>
       <ul class="nav_menu">
         <li class="nav_menu__item">
@@ -56,11 +56,11 @@
         <h1 class="hero__text__title">Servicios Audiovisuales</h1>
         <p class="hero__text__subtitle"> M&aacute;s que Simples Im&aacute;genes, Creamos Recuerdos Eternos que
           Atesorarás por Siempre</p>
-        <a class="hero__text__link" href="#main">Iniciemos</a>
+        <a class="hero__text__link" href="#main"><i class="fa-solid fa-play fa-fade"></i>&nbsp;Iniciemos</a>
         <a class="hero__text__link ico" href="#contactenos"><i class="fa-solid fa-file-invoice"></i>&nbsp;Cotizacion</a>
       </div>
       <picture class="hero_img">
-        <img src="assets/media/public/dron-removebg-preview.png" alt="imagen de dron VGR">
+        <img loading="eager" src="assets/media/public/dron-removebg-preview.png" alt="imagen de dron VGR">
       </picture>
     </section>
 
@@ -121,7 +121,7 @@
     <section class="nosotros container" id="nosotros">
       <div class="nosotros__empresa">
         <div class="nosotros__text">
-          <h2 class="nosotros__text__title">NOSOTROS</h2>
+          <h2 class="nosotros__text__title title">NOSOTROS</h2>
           <h3 class="nosotros__text__subtitle"><strong> <abbr title="Victor Gonzales Ramirez">VGR</abbr>: Marcando
               Historias con Años de Experiencia Visual</strong>
           </h3>
@@ -134,7 +134,7 @@
           </p>
         </div>
         <picture class="nosotros_img">
-          <img src="assets/media/nosotros/nosotros.jpeg" alt="nosotros EMESMA">
+          <img loading="lazy" src="assets/media/nosotros/nosotros.jpeg" alt="nosotros EMESMA">
         </picture>
       </div>
 
@@ -203,7 +203,7 @@
 
     <section class="container" id="servicios">
       <div class="servicios">
-        <h2 class="servicios__title">NUESTROS SERVICIOS</h2>
+        <h2 class="servicios__title title">NUESTROS SERVICIOS</h2>
         <p class="servicios__text">Brindamos todo tipo de servicios de Geofísica, Geotecnía y Minería y siempre nos
           complace resolver tareas únicas y no estándar.
           Siempre tomamos desafíos y los llevamos a una conclusión.</p>
@@ -212,7 +212,7 @@
         <article class="servicios__card">
           <div class="servicios__card_face front">
             <picture>
-              <img src="assets/media/servicios/servicios1.jpeg" alt="servicios de Grabación en 4k">
+              <img loading="lazy" src="assets/media/servicios/servicios1.jpeg" alt="servicios de Grabación en 4k">
             </picture>
             <h3>Grabaci&oacute;n 4k</h3>
           </div>
@@ -229,7 +229,7 @@
         <article class="servicios__card">
           <div class="servicios__card_face front">
             <picture>
-              <img src="assets/media/servicios/servicios2.jpg" alt="servicios de Grabación en 4k">
+              <img loading="lazy" src="assets/media/servicios/servicios2.jpg" alt="servicios de Grabación en 4k">
             </picture>
             <h3>Obras Civiles</h3>
           </div>
@@ -246,7 +246,7 @@
         <article class="servicios__card">
           <div class="servicios__card_face front">
             <picture>
-              <img src="assets/media/servicios/servicios3.jpg" alt="servicios de Grabación en 4k">
+              <img loading="lazy" src="assets/media/servicios/servicios3.jpg" alt="servicios de Grabación en 4k">
             </picture>
             <h3>Registro de Eventos</h3>
           </div>
@@ -263,7 +263,7 @@
         <article class="servicios__card">
           <div class="servicios__card_face front">
             <picture>
-              <img src="assets/media/servicios/servicios4.jpeg" alt="servicios de Grabación en 4k">
+              <img loading="lazy" src="assets/media/servicios/servicios4.jpeg" alt="servicios de Grabación en 4k">
             </picture>
             <h3>Gracaci&oacute;nes Empresariales</h3>
           </div>
@@ -280,7 +280,7 @@
         <article class="servicios__card">
           <div class="servicios__card_face front">
             <picture>
-              <img src="assets/media/servicios/servicios5.jpeg" alt="servicios de Grabación en 4k">
+              <img loading="lazy" src="assets/media/servicios/servicios5.jpeg" alt="servicios de Grabación en 4k">
             </picture>
             <h3>Fotos Profesionales</h3>
           </div>
@@ -304,37 +304,43 @@
           <div class="galeria__fotografia__a-container">
             <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto1.jpeg"
               data-lightbox="models" data-title="Imagen1">
-              <img class="galeria__fotografia__a-container__img" src="assets/media/galeria/img/foto1.jpeg" alt="abc">
+              <img loading="lazy" class="galeria__fotografia__a-container__img"
+                src="assets/media/galeria/img/foto1.jpeg" alt="abc">
             </a>
           </div>
           <div class="galeria__fotografia__a-container">
             <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto2.jpg"
               data-lightbox="models" data-title="Imagen2">
-              <img class="galeria__fotografia__a-container__link__img" src="assets/media/galeria/img/foto2.jpg" alt="">
+              <img loading="lazy" class="galeria__fotografia__a-container__link__img"
+                src="assets/media/galeria/img/foto2.jpg" alt="">
             </a>
           </div>
           <div class="galeria__fotografia__a-container">
             <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto3.jpeg"
               data-lightbox="models" data-title="Imagen3">
-              <img class="galeria__fotografia__a-container__link__img" src="assets/media/galeria/img/foto3.jpeg" alt="">
+              <img loading="lazy" class="galeria__fotografia__a-container__link__img"
+                src="assets/media/galeria/img/foto3.jpeg" alt="">
             </a>
           </div>
           <div class="galeria__fotografia__a-container">
             <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto4.jpeg"
               data-lightbox="models" data-title="Imagen4">
-              <img class="galeria__fotografia__a-container__link__img" src="assets/media/galeria/img/foto4.jpeg" alt="">
+              <img loading="lazy" class="galeria__fotografia__a-container__link__img"
+                src="assets/media/galeria/img/foto4.jpeg" alt="">
             </a>
           </div>
           <div class="galeria__fotografia__a-container">
             <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto5.jpeg"
               data-lightbox="models" data-title="Imagen5">
-              <img class="galeria__fotografia__a-container__link__img" src="assets/media/galeria/img/foto5.jpeg" alt="">
+              <img loading="lazy" class="galeria__fotografia__a-container__link__img"
+                src="assets/media/galeria/img/foto5.jpeg" alt="">
             </a>
           </div>
           <div class="galeria__fotografia__a-container">
             <a class="galeria__fotografia__a-container__link" href="assets/media/galeria/img/foto6.jpg"
               data-lightbox="models" data-title="Imagen6">
-              <img class="galeria__fotografia__a-container__link__img" src="assets/media/galeria/img/foto6.jpg" alt="">
+              <img loading="lazy" class="galeria__fotografia__a-container__link__img"
+                src="assets/media/galeria/img/foto6.jpg" alt="">
             </a>
           </div>
 
@@ -358,7 +364,8 @@
     </section>
 
     <section class="contactanos" id="contactenos">
-      <h2 class="contactanos__title">Interesado de trabajar con <abbr title="Victor Gonzales Ramirez">VGR</abbr></h2>
+      <h2 class="contactanos__title title">Interesado de trabajar con <abbr title="Victor Gonzales Ramirez">VGR</abbr>
+      </h2>
       <p class="contactanos__text">Cont&aacute;ctate con Nosotros ahora!</p>
 
       <div class="contactanos__contact">
@@ -405,7 +412,7 @@
             <label for="email" class="formulario__label">Email:</label>
             <input type="email" name="user_correo" id="email" class="formulario__input" placeholder="Escriba su email">
             <label for="telefono" class="formulario__label">Telefono:</label>
-            <input type="text" name="user_telefono" id="telefono" class="formulario__input">
+            <input type="text" name="user_telefono" id="telefono" class="formulario__input" placeholder="Escriba su telefono">
             <label for="mensaje" class="formulario__label">Mensaje:</label>
             <textarea name="user_mensaje" id="mensaje" cols="30" rows="5" class="formulario__textarea"
               placeholder="Escriba su mensaje"></textarea>
@@ -416,8 +423,8 @@
       </div>
 
       <div class="contactanos__map">
-        <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15599.379808859077!2d-77.032259334562!3d-12.190951213653952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b763d7b3a021%3A0x2aa2b834ea824a38!2sSanto%20Tomas%20151%2C%20Lima%2015066!5e0!3m2!1ses!2spe!4v1692851803187!5m2!1ses!2spe"
+        <iframe loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15599.379808859077!2d-77.032259334562!3d-12.190951213653952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b763d7b3a021%3A0x2aa2b834ea824a38!2sSanto%20Tomas%20151%2C%20Lima%2015066!5e0!3m2!1ses!2spe!4v1692851803187!5m2!1ses!2spe"
           width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
@@ -430,7 +437,7 @@
       <div class="pie-pagina__grupo1__box">
         <figure>
           <a href="#">
-            <img src="assets/media/logo/logo-blanco.png" alt="logo de VGR">
+            <img loading="lazy" src="assets/media/logo/logo-blanco.png" alt="logo de VGR">
           </a>
         </figure>
       </div>
